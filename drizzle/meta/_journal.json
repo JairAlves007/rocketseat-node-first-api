@@ -1,0 +1,48 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1755039614148,
+      "tag": "0000_famous_the_fallen",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1755039797969,
+      "tag": "0001_sad_kid_colt",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1755125074027,
+      "tag": "0002_tranquil_lila_cheney",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1755125145141,
+      "tag": "0003_wise_the_leader",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1755125960587,
+      "tag": "0004_many_proudstar",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1755128284259,
+      "tag": "0005_legal_betty_brant",
+      "breakpoints": true
+    }
+  ]
+}
