@@ -2,6 +2,8 @@ import { FastifyPluginAsyncZod } from "fastify-type-provider-zod";
 import z from "zod";
 import { db } from "../database/client";
 import { courses } from "../database/schema";
+import { checkRequestJWT } from "../hooks/check-request-jwt";
+import { checkUserRole } from "../hooks/check-user-role";
 
 export const createCourseRoute: FastifyPluginAsyncZod = async server => {
 	server.post(
@@ -27,7 +29,8 @@ export const createCourseRoute: FastifyPluginAsyncZod = async server => {
 						})
 						.describe("Course not found")
 				}
-			}
+			},
+			preHandler: [checkRequestJWT, checkUserRole("manager")]
 		},
 		async (request, reply) => {
 			const { title, description } = request.body;

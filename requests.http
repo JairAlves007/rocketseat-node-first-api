@@ -1,0 +1,26 @@
+POST http://localhost:3000/courses
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkMjBkNDg5NS00OGIxLTQyZTAtYTcyZC1jMzM2YzY4MWU0MGEiLCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc1NTIxNDE1OH0.oLfkiSO1dzgqSjGjpKvHHaUIDkh__9E_zOqK0rXECxg
+Content-Type: application/json
+
+{
+  "title": "Curso de Cobol"
+}
+
+###
+
+GET http://localhost:3000/courses?orderBy=title
+
+###
+
+GET http://localhost:3000/courses/85dad3bf-f5d5-4807-8c93-881a7e3dd77e
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkMjBkNDg5NS00OGIxLTQyZTAtYTcyZC1jMzM2YzY4MWU0MGEiLCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc1NTIxNDE1OH0.oLfkiSO1dzgqSjGjpKvHHaUIDkh__9E_zOqK0rXECxg
+
+###
+
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email": "Miguel.Saraiva66@yahoo.com",
+  "password": "123456"
+}

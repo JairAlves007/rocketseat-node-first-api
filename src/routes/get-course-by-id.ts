@@ -3,6 +3,8 @@ import { db } from "../database/client";
 import { courses } from "../database/schema";
 import { eq } from "drizzle-orm";
 import z from "zod";
+import { checkRequestJWT } from "../hooks/check-request-jwt";
+import { checkUserRole } from "../hooks/check-user-role";
 
 export const getCourseById: FastifyPluginAsyncZod = async server => {
 	server.get(
@@ -31,7 +33,8 @@ export const getCourseById: FastifyPluginAsyncZod = async server => {
 						})
 						.describe("Course not found")
 				}
-			}
+			},
+			preHandler: [checkRequestJWT, checkUserRole("manager")]
 		},
 		async (request, reply) => {
 			const { id: courseId } = request.params;

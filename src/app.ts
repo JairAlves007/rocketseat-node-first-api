@@ -10,6 +10,7 @@ import { serializerCompiler } from "fastify-type-provider-zod";
 import { getCoursesRoute } from "./routes/get-courses";
 import { getCourseById } from "./routes/get-course-by-id";
 import { createCourseRoute } from "./routes/create-course";
+import { loginRoute } from "./routes/login";
 
 const server = fastify().withTypeProvider<ZodTypeProvider>();
 
@@ -35,5 +36,6 @@ server.register(fastifySwaggerUi, {
 server.register(getCoursesRoute);
 server.register(getCourseById);
 server.register(createCourseRoute);
+server.register(loginRoute);
 
 export { server };
