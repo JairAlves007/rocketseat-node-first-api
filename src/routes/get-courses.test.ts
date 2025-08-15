@@ -1,9 +1,9 @@
 import { expect, test } from "vitest";
 import request from "supertest";
-import { server } from "../app";
-import { makeCourse } from "../tests/factories/make-course";
+import { server } from "../app.ts";
+import { makeCourse } from "../tests/factories/make-course.ts";
 import { randomUUID } from "node:crypto";
-import { makeAuthenticatedUser } from "../tests/factories/make-user";
+import { makeAuthenticatedUser } from "../tests/factories/make-user.ts";
 
 test("get a curse by id", async () => {
 	await server.ready();

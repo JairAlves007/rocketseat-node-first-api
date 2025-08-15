@@ -1,6 +1,6 @@
 import { fakerPT_BR as faker } from "@faker-js/faker";
-import { db } from "../../database/client";
-import { users } from "../../database/schema";
+import { db } from "../../database/client.ts";
+import { users } from "../../database/schema.ts";
 import { randomUUID } from "node:crypto";
 import { hash } from "argon2";
 import jwt from "jsonwebtoken";

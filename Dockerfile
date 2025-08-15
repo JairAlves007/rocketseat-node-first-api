@@ -8,4 +8,4 @@ RUN npm ci
 
 EXPOSE 3000
 
-CMD ["tsx", "src/server.ts"]
+CMD ["node", "src/server.ts"]

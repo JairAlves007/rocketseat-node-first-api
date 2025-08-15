@@ -7,10 +7,10 @@ import {
 	type ZodTypeProvider
 } from "fastify-type-provider-zod";
 import { serializerCompiler } from "fastify-type-provider-zod";
-import { getCoursesRoute } from "./routes/get-courses";
-import { getCourseById } from "./routes/get-course-by-id";
-import { createCourseRoute } from "./routes/create-course";
-import { loginRoute } from "./routes/login";
+import { getCoursesRoute } from "./routes/get-courses.ts";
+import { getCourseById } from "./routes/get-course-by-id.ts";
+import { createCourseRoute } from "./routes/create-course.ts";
+import { loginRoute } from "./routes/login.ts";
 
 const server = fastify().withTypeProvider<ZodTypeProvider>();
 

@@ -1,4 +1,4 @@
-import { server } from "./app";
+import { server } from "./app.ts";
 
 server
 	.listen({

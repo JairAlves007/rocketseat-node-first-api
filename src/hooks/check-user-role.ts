@@ -1,6 +1,5 @@
 import type { FastifyReply, FastifyRequest } from "fastify";
-import jwt from "jsonwebtoken";
-import { getAuthUserFromRequest } from "../utils/get-auth-user-from-request";
+import { getAuthUserFromRequest } from "../utils/get-auth-user-from-request.ts";
 
 type JWTPayload = {
 	sub: string;

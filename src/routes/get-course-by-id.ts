@@ -1,10 +1,10 @@
-import { FastifyPluginAsyncZod } from "fastify-type-provider-zod";
-import { db } from "../database/client";
-import { courses } from "../database/schema";
+import type { FastifyPluginAsyncZod } from "fastify-type-provider-zod";
+import { db } from "../database/client.ts";
+import { courses } from "../database/schema.ts";
 import { eq } from "drizzle-orm";
 import z from "zod";
-import { checkRequestJWT } from "../hooks/check-request-jwt";
-import { checkUserRole } from "../hooks/check-user-role";
+import { checkRequestJWT } from "../hooks/check-request-jwt.ts";
+import { checkUserRole } from "../hooks/check-user-role.ts";
 
 export const getCourseById: FastifyPluginAsyncZod = async server => {
 	server.get(

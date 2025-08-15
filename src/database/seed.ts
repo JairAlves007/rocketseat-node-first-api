@@ -1,5 +1,5 @@
 import { hash } from "argon2";
-import { db } from "./client";
+import { db } from "./client.ts";
 import { courses, enrollments, users } from "./schema";
 import { fakerPT_BR as faker } from "@faker-js/faker";
 
